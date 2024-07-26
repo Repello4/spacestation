@@ -174,6 +174,6 @@ function showSkills(planet) {
 function resetSkills(){
     const infoDisplay = document.querySelector('.info-display');
     message = '"A brilliant AI engineer harmonizes their tools, crafting a solar system of innovation and balance" <br> ~ Your Mother'
-    infoDisplay.innerHTML = `<div style = 'text-align: center; vertical-align: middle; height: 100%; display: flex; justify-content: center; align-items: center;'><blockquote>${message}</blockquote></div>`;
+    infoDisplay.innerHTML = `<blockquote class = 'fade-in' style = 'text-align: center; display: flex; justify-content: center; align-items: center; height: 100%;'>${message}</blockquote></div>`;
     infoDisplay.style.display = 'block';
 }

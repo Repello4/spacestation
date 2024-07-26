@@ -4713,16 +4713,16 @@ input, select, textarea {
 
 	
 		.ind-skill .skill-img-container{
-			width: 70px;
-			height: 70px;
+			width: 60px;
+			height: 60px;
 			display: flex;
 			flex-direction: column;
 			margin: 30px; /* Adjusted for spacing between each element */
 		}
 
 			/* Adjusted for spacing between image and text */
-		.ind-skill .skill-img-container:hover{
-			transform: scale(1.1);
+		.skill-img-container:hover{
+			transform: scale(1.1) !important;
 		}
 		
 		.container {
@@ -4739,7 +4739,8 @@ input, select, textarea {
 			background-size: cover;
 			background-position: center;
 			position: relative;
-			border-radius: 20px; /* Added for a subtle rounded edge */
+			
+			border-radius: 1000%;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Added for a soft shadow to give a ripple effect */
 			
 		}
@@ -4849,4 +4850,19 @@ input, select, textarea {
 				opacity: 1;
 			}
 		}
+		@keyframes dramaticEntry {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		  }
+		
+		  [data-animate] {
+			opacity: 0;
+			animation: dramaticEntry 1s ease-in-out forwards;
+			animation-delay: attr(data-animate);
+		  }
 
+		.delayed-dramatic-effect {
+			opacity: 0;
+			animation: dramaticEntry 1s ease-in-out 1.5s;
+			animation-fill-mode: forwards;
+		}

@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/animations.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -66,12 +67,49 @@
 						  </div>
 						  <div class="planet earth" onclick="showSkills('earth')">
 							<div class="skills-list" style="display: none;">
-								<ul>
-									<li>JavaScript</li>
-									<li>HTML/CSS</li>
-									<li>React</li>
-								</ul>
-								<img src="images/earth-skills.png" alt="Earth Skills">
+								<div style="text-align: center;">
+									<h2 class = 'fade-in' >Software Engineering</h2>
+									<p class = 'text-focus-in'>
+										<i>Mother always said I'd be a scientist,
+										So I became one of data—<br>I wear a lab coat when I code.</i>
+									</p> 
+								</div>
+								
+							<h3 class = 'fade-in' style = 'animation-delay: 1s; margin-bottom: 0;'>Front End</h3>
+
+							<div class="ind-skill" style = 'justify-content: center;'>
+								
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1s;'>
+									<img src="images/software_eng/js.png" alt="JavaScript" >
+									JavaScript
+								</div>
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.2s;'>
+									<img src="images/software_eng/html.png" alt="HTML">
+									HTML
+								</div>
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.4s;'>
+									<img src="images/software_eng/css.png" alt="CSS">
+									CSS
+								</div>
+							</div>
+
+							<h3 class = 'fade-in' style = 'animation-delay: 1.6s; margin: 30px;'>'Middle End'</h3>
+							<div class="ind-skill" style = 'justify-content: center;'>
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.6s;'>
+									<img src="images/software_eng/git.png" alt="Git">
+									Git
+								</div>
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.8s;'>
+									<img src="images/software_eng/linux.png" alt="Linux">
+									Linux
+								</div>
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 2s;'>
+									<img src="images/software_eng/vbox.png" alt="VirtualBox">
+									VirtualBox
+								</div>
+							</div>
+
+							<h3 class = 'fade-in' style = 'animation-delay: 1.6s; margin-bottom: 0;'>Back End</h3>
 							</div>
 						  </div>
 
@@ -80,41 +118,43 @@
 
 						  <div class="planet venus" onclick="showSkills('venus')" id = 'Data Science Skills'>
 							<div class="skills-list" style="display: none;">
-
-								<h2>Data Science</h2>
-								<p style="text-align: center; margin: 0 0 0 0;">
-									<i>Mother always said I'd be a scientist,
-									So I became a data scientist—I wear a lab coat when I code.</i> 
-							<h3 style = 'text-align: center; margin: 0 0 0 0'>The Trinity</h3>
+								<div style="text-align: center;">
+									<h2 class = 'fade-in' >Data Science</h2>
+									<p class = 'text-focus-in'>
+										<i>Mother always said I'd be a scientist,
+										So I became one of data—<br>I wear a lab coat when I code.</i>
+									</p> 
+								</div>
+								
+							<h3 class = 'fade-in' style = 'animation-delay: 1s; margin-bottom: 0;'>The Trinity</h3>
 
 							<div class="ind-skill" style = 'justify-content: center;'>
 								
-								<div class="skill-img-container">
-									<img src="images/data_science/python.png" alt="Python">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1s;'>
+									<img src="images/data_science/python.png" alt="Python" >
 									Python
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.2s;'>
 									<img src="images/data_science/sql.png" alt="SQL">
 									SQL
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.4s;'>
 									<img src="images/data_science/tabl.png" alt="SQL">
 									Tableau
 								</div>
-								
 							</div>
-							<p style = 'text-align: center; margin: 2rem 0 0 0;'><b>Python Libraries</b></b></p>
+							<p class = 'fade-in' style = 'text-align: center; margin: 2rem 0 0 0;'><b>Python Libraries</b></b></p>
 
 							<div class="ind-skill" style = 'justify-content: center;'>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.6s;'>
 									<img src="images/data_science/libraries/pandas.png" alt="Pandas">
 									Pandas
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 1.8s;'>
 									<img src="images/data_science/libraries/numpy.png" alt="Numpy">
 									Numpy
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 2s;'>
 									<img src="images/data_science/libraries/matplot.png" alt="Matplotlib">
 									Matplotlib
 								</div>
@@ -124,24 +164,24 @@
 							
 							<div class="ind-skill" style = 'justify-content: center;'>
 							
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 2.2s;'>
 									<img src="images/data_science/libraries/scikit.png" alt="Scikit-Learn">
 									Scikit-Learn
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 2.4s;'>
 									<img src="images/data_science/libraries/pytorch.png" alt="PyTorch">
 									PyTorch
 								</div>
 
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 2.6s;'>
 									<img src="images/data_science/libraries/selenium.png" alt="Selenium">
 									Selenium
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 2.8s;'>
 									<img src="images/data_science/libraries/django.png" alt="Django">
 									Django
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 3s;'>
 									<img src="images/data_science/libraries/request.png" alt="Requests">
 									Requests
 								</div>
@@ -149,15 +189,15 @@
 							</div>
 							<p style = 'text-align: center; margin: 2rem 0 0 0;'><b>Databases</b></p>
 							<div class="ind-skill" style = 'justify-content: center;'>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 3.2s;'>
 									<img src="images/data_science/databases/ssms.png" alt="SQLite">
 									Microsoft 
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 3.4s;'>
 									<img src="images/data_science/databases/postgres.png" alt="Postgres">
 									Postgres
 								</div>
-								<div class="skill-img-container">
+								<div class="skill-img-container bounce-in-top" style = 'animation-delay: 3.6s;'>
 									<img src="images/data_science/databases/mongo.png" alt="MongoDB">
 									MongoDB
 								</div>
@@ -188,7 +228,7 @@
 						
 
 						
-							<blockquote style = 'text-align: center; display: flex; justify-content: center; align-items: center; height: 100%;'>
+							<blockquote class = 'fade-in' style = 'animation-delay: 2s; text-align: center; display: flex; justify-content: center; align-items: center; height: 100%;'>
 								"A brilliant AI engineer harmonizes their tools, crafting a solar system of innovation and balance" <br> ~ Your Mother
 							</blockquote>
 							
@@ -247,30 +287,7 @@
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
 								</article>
-								<article>
-									<header>
-										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
+						
 
 							</section>
 
@@ -282,9 +299,7 @@
 									<a href="#" class="page">2</a>
 									<a href="#" class="page">3</a>
 									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
+			
 									<a href="#" class="next">Next</a>
 								</div>
 							</footer>
