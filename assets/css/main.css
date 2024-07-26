@@ -7,6 +7,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2251,11 +2253,11 @@ input, select, textarea {
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
-			display: flex;
+				display: flex;
 			-moz-flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
+				flex-wrap: wrap;
 			width: calc(100% + 3rem);
 			margin: -1.5rem 0 2rem -1.5rem;
 		}
@@ -2603,8 +2605,8 @@ input, select, textarea {
 		}
 
 			.image.left img, .image.right img {
-				width: 100%;
-			}
+					width: 100%;
+				}
 
 		.image.left {
 			float: left;
@@ -2639,7 +2641,7 @@ input, select, textarea {
 		}
 
 			.image.main:first-child {
-				margin-top: 0;
+					margin-top: 0;
 			}
 
 			.image.main img {
@@ -2931,8 +2933,8 @@ input, select, textarea {
 
 		header > h2 + p {
 			font-size: 1rem;
-			margin-top: -0.75rem;
-		}
+						margin-top: -0.75rem;
+					}
 
 		header > h3 + p {
 			font-size: 0.9rem;
@@ -2954,7 +2956,7 @@ input, select, textarea {
 			}
 
 			header.major > p {
-				margin-top: 0;
+					margin-top: 0;
 				text-align: center;
 			}
 
@@ -3033,7 +3035,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-			@media screen and (max-width: 980px) {
+		@media screen and (max-width: 980px) {
 
 				table th {
 					font-size: 0.9rem;
@@ -3227,27 +3229,35 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
+
+
+
+
 		#wrapper > .bg {
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
+					width: 100%;
 			height: 100%;
-			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
-			background-size: auto,								auto,														100% auto;
-			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
+			background-color: #356196;
+			background-image: url("../../images/background.jpeg");
+			background-size: contain;
+			background-position: top center;
+			background-repeat: repeat-y;
+			background-attachment: scroll;
+
+
 			z-index: -1;
 		}
+
+
 
 			#wrapper > .bg.fixed {
 				position: fixed;
 				width: 100vw;
 				height: 100vh;
 			}
-
+ 
 		#wrapper.fade-in:before {
 			pointer-events: none;
 			-moz-transition: opacity 1s ease-in-out;
@@ -3276,7 +3286,7 @@ input, select, textarea {
 		@media screen and (orientation: portrait) {
 
 			#wrapper > .bg {
-				background-size: auto,								auto,														auto 175%;
+				background-size: auto;
 			}
 
 		}
@@ -3293,7 +3303,7 @@ input, select, textarea {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
-		display: flex;
+				display: flex;
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -3481,8 +3491,8 @@ input, select, textarea {
 
 				#intro p {
 					font-size: 1rem;
-					margin-top: 0rem;
-				}
+						margin-top: 0rem;
+					}
 
 				#intro .actions {
 					display: none;
@@ -3682,7 +3692,7 @@ input, select, textarea {
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
-			display: flex;
+				display: flex;
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
@@ -3759,8 +3769,8 @@ input, select, textarea {
 		background-color: #ffffff;
 		position: relative;
 		margin: 0 auto;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
+		width: 100%;
+
 		z-index: 2;
 	}
 
@@ -3831,11 +3841,11 @@ input, select, textarea {
 			-moz-flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
+				flex-wrap: wrap;
 			-moz-align-items: -moz-stretch;
 			-webkit-align-items: -webkit-stretch;
 			-ms-align-items: -ms-stretch;
-			align-items: stretch;
+				align-items: stretch;
 			text-align: center;
 			width: 100%;
 			padding: 0;
@@ -4377,8 +4387,8 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#footer {
-				width: 100%;
-			}
+					width: 100%;
+				}
 
 		}
 
@@ -4686,4 +4696,157 @@ input, select, textarea {
 			visibility: visible;
 		}
 
-	}
+				}
+
+
+
+
+		
+		
+
+		.ind-skill{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-size: 1rem;
+		}
+
+	
+		.ind-skill .skill-img-container{
+			width: 70px;
+			height: 70px;
+			display: flex;
+			flex-direction: column;
+			margin: 30px; /* Adjusted for spacing between each element */
+		}
+
+			/* Adjusted for spacing between image and text */
+		.ind-skill .skill-img-container:hover{
+			transform: scale(1.1);
+		}
+		
+		.container {
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			background-color: white;
+		  }
+		  
+		  .solar-system {
+			width: 65%;
+			height: 100%;
+			background-image: url("../../images/space5.png");
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			border-radius: 20px; /* Added for a subtle rounded edge */
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Added for a soft shadow to give a ripple effect */
+			
+		}
+		
+		.info-display {
+		  width: 35%;
+		  height: 100%;
+		  
+		  align-items: center;
+		  justify-content: center;
+		  background-color: #f5f5f5;
+		  padding: 10px;
+		  
+		}
+
+		.info-display p{
+			font-size: 1rem;
+			padding: -10px;
+		}
+		
+		
+		  .planet {
+			border-radius: 50%;
+			position: absolute;
+			
+		  }
+		  
+		  .sun {
+			width: 350px;
+			height: 350px;
+			background-image: url("../../images/sun.png");
+			background-size: cover;
+			background-position: center;
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 5;
+		  }
+		  
+		  .earth {
+			width: 150px;
+			height: 150px;
+			background-image: url("../../images/earth.png");
+			background-size: cover;
+			background-position: center;
+			border-radius: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 10;
+		  }
+		  
+		  .venus {
+
+			width: 150px;
+			height: 150px;
+			background-image: url("../../images/venus.png");
+			background-size: cover;
+			background-position: center;
+			border-radius: 50%;
+
+			/* Initial Starting Positions */
+			/* top: 0%; */
+			top:0%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			z-index: 3;
+		  }
+		  
+		  .neptune {
+			width: 150px;
+			height: 150px;
+			background-image: url("../../images/neptune.png");
+			background-size: cover;
+			background-position: center;
+			border-radius: 50%;
+			/* Initial Starting Positions */
+			top: 0%;
+			left: 100%;
+			
+			transform: translate(-50%, -50%);	
+			z-index: 10;
+
+		  }
+		  
+		  #planet-info {
+			font-size: 1.5rem;
+			text-align: center;
+		  }
+
+		
+		.planet:hover {
+			transform: translate(-50%, -50%) scale(1.1);
+		}
+
+
+		 .dramatic-effect {
+			animation: dramaticEntry 1s ease-in-out;
+		}
+		
+		@keyframes dramaticEntry {
+			0% {
+				transform: scale(0.5);
+				opacity: 0;
+			}
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
