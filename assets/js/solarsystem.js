@@ -1,10 +1,14 @@
 
-
-const sun = document.querySelector(".sun");
+const sun ={
+    name:"sun",
+    speed: 1,
+    speed2: 1,
+    el: document.querySelector(".sun"),
+}
 
 const solarSystem = document.querySelector(".solar-system");
 
-const sunRect = sun.getBoundingClientRect();
+const sunRect = sun.el.getBoundingClientRect();
 
 const sunPosition = {
     x: sunRect.left + window.scrollX,
@@ -57,7 +61,7 @@ const neptune = {
     el: document.querySelector(".neptune"),
 }; 
 
-planets = [venus, earth, neptune];
+planets = [sun,venus, earth, neptune];
 
 
 function update(planet) {
@@ -120,6 +124,7 @@ function animate() {
 function togglePlanetSpeed(planet) {
     if (planet.speed != 0) {
         stopPlanet(planet);
+        showSkills(planet.name);
         startPlanets(planet.name);
     } else {
         planet.speed = planet.speed2;
@@ -148,15 +153,12 @@ function showSkills(planet) {
 
 
  
-    if (planet === 'sun'){
-        resetSkills();
-    }
-    else {
+
         const skillsList = document.querySelector(`.${planet} .skills-list`);
         const infoDisplay = document.querySelector('.info-display');
         infoDisplay.innerHTML = skillsList.innerHTML;
         infoDisplay.style.display = 'block';
-    }
+    
 }
 
 
@@ -178,6 +180,9 @@ earth.el.addEventListener("click", () => {
 
 neptune.el.addEventListener("click", () => {
     togglePlanetSpeed(neptune);
+});
+sun.el.addEventListener("click", () => {
+    togglePlanetSpeed(sun);
 });
 
 

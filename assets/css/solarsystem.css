@@ -100,9 +100,21 @@
   
   align-items: center;
   justify-content: center;
+  
   background-color:white;
   padding: 10px;
   
+}
+
+@media screen and (max-width: 500px) {
+    .education p {
+        font-size: 0.7rem!important;
+    }
+ 
+}
+.skills-information{
+    margin: auto ;
+    vertical-align: middle;
 }
 
 .neg-space{
