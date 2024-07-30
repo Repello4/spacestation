@@ -1,0 +1,145 @@
+#experience {
+    padding: 2em 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #212931;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #212931;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+.timeline-item:nth-child(even)::after {
+    left: -16px;
+}
+.timeline-item h3 {
+    margin-bottom: 0.5em;
+}
+.timeline-item h4 {
+    margin-bottom: 0.25em;
+    color: #909498;
+}
+
+
+.timeline-item img {
+
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 25px;
+}
+
+.timeline-item .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timeline-item .header:hover img{
+    transform: scale(1.1) !important;
+}
+
+.text-img img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-right: 25px;
+}
+/* Mobile */
+@media screen and (max-width: 600px) {
+
+    .timeline {
+        max-width: 95vw;
+    }
+    .timeline-item img {
+
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-right: 25px;
+    }
+    .timeline::after {
+        display: none;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+       
+
+    }
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 0%;
+        background-color: white;
+        border: 4px solid #212931;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .timeline-item:nth-child(odd) {
+        left: 0;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+    .timeline-item:nth-child(even)::after {
+        left: 0%;
+    }
+}
+
+.timeline-item .date {
+    font-style: italic;
+    color: #909498;
+    margin-bottom: 1em;
+}
+
+.animate-slide-in-right {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0s, visibility 0s;
+  }
+
+  .animate-slide-in-left {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0s, visibility 0s;
+  }

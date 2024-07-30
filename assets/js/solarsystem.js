@@ -15,9 +15,10 @@ console.log(`Sun Position - X: ${sunPosition.x}, Y: ${sunPosition.y}`);
 
 
 const venus = {
-
+    name: "venus",
     theta: 3.14, //Starting position
-    speed: 0.0015, //Speed of the planet
+    speed: 0.001, //Speed of the planet
+    speed2: 0.001,
     radius: 12.5, //Radius of the planet
     adjX: 0, //Adjustment of the x position
     adjY: 30, //Adjustment of the y position
@@ -27,11 +28,11 @@ const venus = {
     high: 7,
 };
 
-
-
 const earth = {
+    name: "earth",
     theta: 5,
-    speed: 0.0015,
+    speed: 0.0006,
+    speed2: 0.0006,
     radius: 15,
     adjR: 1.5,
     adjX: 0,
@@ -43,8 +44,10 @@ const earth = {
 };
 
 const neptune = {
-    theta: 0.32,
-    speed: 0.0015,
+    name: "neptune",
+    theta: 1.5,
+    speed: 0.0018,
+    speed2: 0.0018,
     radius: 10,
     adjX: 0,
     adjY: 30,
@@ -52,9 +55,9 @@ const neptune = {
     low: 4,
     high: 6,
     el: document.querySelector(".neptune"),
-};
+}; 
 
-
+planets = [venus, earth, neptune];
 
 
 function update(planet) {
@@ -114,46 +117,32 @@ function animate() {
 }
 
 
-
-
-// Draw orbits once when the page loads
-drawOrbitPath(venus);
-drawOrbitPath(earth);
-drawOrbitPath(neptune);
-
-
-requestAnimationFrame(animate);
-
-function togglePlanetSpeed(planet, speed) {
+function togglePlanetSpeed(planet) {
     if (planet.speed != 0) {
         stopPlanet(planet);
+        startPlanets(planet.name);
     } else {
-        planet.speed = speed;
+        planet.speed = planet.speed2;
+        planet.el.style.boxShadow = "none";
         resetSkills();
     }
 }
 
-venus.el.addEventListener("click", () => {
-    togglePlanetSpeed(venus, 0.0015);
-});
-
-earth.el.addEventListener("click", () => {
-    togglePlanetSpeed(earth, 0.0015);
-});
-
-neptune.el.addEventListener("click", () => {
-    togglePlanetSpeed(neptune, 0.0015);
-});
-
+function startPlanets(planet_name){
+    
+    for (let planet of planets){
+        if (planet.name !== planet_name) {
+            planet.speed = planet.speed2;
+            planet.el.style.boxShadow = "none";
+        }
+    }
+}
 
 function stopPlanet(planet){
     planet.speed = 0;
-    showSkills(planet.el.className);
-
+    planet.el.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.5)";
+    
 }
-
-
-
 // Show skills
 function showSkills(planet) {
 
@@ -173,7 +162,29 @@ function showSkills(planet) {
 
 function resetSkills(){
     const infoDisplay = document.querySelector('.info-display');
-    message = '"A brilliant AI engineer harmonizes their tools, crafting a solar system of innovation and balance" <br> ~ Your Mother'
-    infoDisplay.innerHTML = `<blockquote class = 'fade-in' style = 'text-align: center; display: flex; justify-content: center; align-items: center; height: 100%;'>${message}</blockquote></div>`;
+    const defaultInfo = document.querySelector('.default-info');
+    infoDisplay.innerHTML = defaultInfo.innerHTML;
     infoDisplay.style.display = 'block';
 }
+
+
+venus.el.addEventListener("click", () => {
+    togglePlanetSpeed(venus);
+});
+
+earth.el.addEventListener("click", () => {
+    togglePlanetSpeed(earth);
+});
+
+neptune.el.addEventListener("click", () => {
+    togglePlanetSpeed(neptune);
+});
+
+
+// Draw orbits once when the page loads
+drawOrbitPath(venus);
+drawOrbitPath(earth);
+drawOrbitPath(neptune);
+
+
+requestAnimationFrame(animate);

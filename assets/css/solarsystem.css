@@ -1,0 +1,224 @@
+.planet {
+    border-radius: 50%;
+    position: absolute;
+    
+  }
+  
+  .sun {
+    width: 45vmin;
+    height: 45vmin;
+    background-image: url("../../images/sun.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+  
+  .earth {
+    width: 25vmin;
+    height: 25vmin;
+    background-image: url("../../images/earth.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .venus {
+
+    width: 17vmin;
+    height: 17vmin;
+    background-image: url("../../images/venus.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+
+    /* Initial Starting Positions */
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  
+  .neptune {
+    width: 15vmin;
+    height: 15vmin;
+    background-image: url("../../images/neptune.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    /* Initial Starting Positions */
+    top: 0%;
+    left: 100%;
+    
+    transform: translate(-50%, -50%);	
+    z-index: 10;
+
+  }
+  
+  #planet-info {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+
+.planet:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.highlight {
+    transform: scale(1.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    z-index: 1; /* Ensure the highlighted planet appears above others */
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .solar-system {
+    width: 65%;
+    height: 100%;
+    background-image: url("../../images/space5.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+    border-radius: 1000%;
+    
+    
+}
+
+.info-display {
+  width: 35%;
+  height: 100%;
+  
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  padding: 10px;
+  
+}
+
+.neg-space{
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1030px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+      }
+    .solar-system {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        order: 1;
+    }
+
+    .info-display {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        order: 2;
+    }
+
+}
+
+.ind-skill{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+}
+.info-display p{
+    font-size: 1rem;
+    padding: -10px;
+}
+
+.ind-skill .skill-img-container{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px; /* Adjusted for spacing between each element */
+}
+
+
+
+    /* Adjusted for spacing between image and text */
+.skill-img-container:hover{
+    transform: scale(1.1) !important;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    
+    .ind-skill .skill-img-container {
+        margin: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.5rem;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    
+   
+    .neg-space{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .ind-skill .skill-img-container {
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        font-size: 0.5rem;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    p,i,h1,h2,h3,h4,h5,h6,b{
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: .8rem;
+    }
+    .info-display p,blockquote{
+        font-size: 1.2rem;
+    }
+
+}
+@media screen and (max-width: 380px) {
+    
+    p,i,h1,h2,h3,h4,h5,h6,b{
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: .8rem;
+    }
+    .neg-space{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .ind-skill .skill-img-container {
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        font-size: 0.5rem;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        
+    }
+}
