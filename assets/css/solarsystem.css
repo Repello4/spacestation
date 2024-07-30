@@ -79,14 +79,23 @@
     width: 100%;
     height: 100vh;
     background-color: white;
+    background-image: url("../../images/3.png");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff!important;
   }
   
+  .container p,h1,h2,h3,h4,h5,h6,b{
+    color: #ffffff ;
+  }
+
   .solar-system {
     width: 65%;
     height: 100%;
-    background-image: url("../../images/space5.png");
+/* 
+    background-image: url("../../images/space4.png");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     position: relative;
     
     border-radius: 1000%;
@@ -100,50 +109,21 @@
   
   align-items: center;
   justify-content: center;
-  
-  background-color:white;
   padding: 10px;
   
 }
 
-@media screen and (max-width: 500px) {
-    .education p {
-        font-size: 0.7rem!important;
-    }
- 
+.education img{
+    width: 200px;
+   
 }
-.skills-information{
-    margin: auto ;
-    vertical-align: middle;
+.education.adj p{
+    margin-top: -30px;
 }
 
 .neg-space{
     margin-top: 30px;
     margin-bottom: 0;
-}
-
-@media screen and (max-width: 1030px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-      }
-    .solar-system {
-        width: 100%;
-        height: 50%;
-        padding: 0;
-        order: 1;
-    }
-
-    .info-display {
-        width: 100%;
-        height: 50%;
-        padding: 0;
-        order: 2;
-    }
-
 }
 
 .ind-skill{
@@ -158,8 +138,8 @@
 }
 
 .ind-skill .skill-img-container{
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     display: flex;
     flex-direction: column;
     margin: 30px; /* Adjusted for spacing between each element */
@@ -174,63 +154,135 @@
 
 
 
-@media screen and (max-width: 1600px) {
-    
+
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+      }
+    .solar-system {
+        width: 100%;
+        height: 40%;
+        padding: 0;
+        order: 1;
+    }
+
+    .info-display {
+        width: 100%;
+        height: 60%;
+        padding: 0;
+        order: 2;
+        
+    }
+    .info-display p,h1,h2,h3,h4,h5,h6,b{
+        font-size: 1.7rem;
+    }
     .ind-skill .skill-img-container {
-        margin: 10px;
-        width: 40px;
-        height: 40px;
-        font-size: 0.5rem;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .info-display p,h1,h2,h3,h4,h5,h6,b{
+        font-size: 1.3rem;
+    }
+    .ind-skill .skill-img-container {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    
+    .info-display p,h1,h2,h3,h4,h5,h6,b{
+        font-size: 1.2rem;
+    }
+    .ind-skill .skill-img-container {
+      
+        width: 50px;
+        height: 50px;
         margin-left: 15px;
         margin-right: 15px;
+    }
+    .education img{
+        width: 130px;
+    }
+    .education p {
+        font-size: 1rem;
+    }
+    .education.adj p{
+        margin-top: -18px;
     }
 }
 
 @media screen and (max-width: 510px) {
     
-   
+    .education img{
+        width: 100px;
+    }
+    .education p {
+        font-size: 0.7rem!important;
+    }
     .neg-space{
         margin-top: 0;
         margin-bottom: 0;
     }
+ 
+    .info-display p,h1,h2,h3,h4,h5,h6,b{
+        font-size: 1rem;
+    }
     .ind-skill .skill-img-container {
-        margin: 5px;
-        width: 20px;
-        height: 20px;
-        font-size: 0.5rem;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 15px;
+      
+        width: 35px;
+        height: 35px;
+        margin-left: 22px;
+        margin-right: 22px;
     }
-    p,i,h1,h2,h3,h4,h5,h6,b{
-        margin-bottom: 0;
-        margin-top: 0;
-        font-size: .8rem;
-    }
-    .info-display p,blockquote{
-        font-size: 1.2rem;
-    }
-
 }
-@media screen and (max-width: 380px) {
-    
-    p,i,h1,h2,h3,h4,h5,h6,b{
-        margin-bottom: 0;
-        margin-top: 0;
-        font-size: .8rem;
-    }
+@media screen and (max-width: 410px)  {
+
     .neg-space{
         margin-top: 0;
         margin-bottom: 0;
     }
+    .info-display p,h1,h2,h3,h4,h5,h6,b{
+        font-size: .8rem;
+    }
     .ind-skill .skill-img-container {
-        margin: 5px;
+        width: 30px;
+        height: 30px;
+
+        
+    }
+    .education.adj p{
+        margin-top: -15px;
+    }
+}
+@media screen and (max-width: 385px)  {
+
+ 
+    .info-display p,h1,h2,h3,h4,h5,h6,b{
+        font-size: .6rem;
+    }
+    .ind-skill .skill-img-container {
         width: 20px;
         height: 20px;
-        font-size: 0.5rem;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
         
+    }
+    .education.adj p{
+        margin-top: -15px;
+    }
+    .education p {
+        font-size: .5rem!important;
     }
 }

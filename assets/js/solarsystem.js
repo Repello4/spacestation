@@ -94,9 +94,10 @@ function drawOrbitPath(planet) {
 
         const orbit = document.createElement('div');
         orbit.style.position = 'absolute';
-        orbit.style.width = '2px';
-        orbit.style.height = '2px';
-        orbit.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        orbit.style.width = '6px';
+        orbit.style.height = '6px';
+        //orbit.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        orbit.style.backgroundColor = 'rgba(128, 128, 128, 0.5)';
         orbit.style.borderRadius = '50%';
         orbit.style.top = `${newTop}%`;
         orbit.style.left = `${newLeft}%`;
@@ -145,7 +146,9 @@ function startPlanets(planet_name){
 
 function stopPlanet(planet){
     planet.speed = 0;
-    planet.el.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.5)";
+
+    //planet.el.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.5)";
+    planet.el.style.boxShadow = "0 0 10px rgba(255, 215, 0, 0.9)";
     
 }
 // Show skills
