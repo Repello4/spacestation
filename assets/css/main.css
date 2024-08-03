@@ -3217,67 +3217,45 @@ input, select, textarea {
 	}
 
 /* Wrapper */
-
-	#wrapper {
-		-moz-transition: opacity 0.5s ease;
-		-webkit-transition: opacity 0.5s ease;
-		-ms-transition: opacity 0.5s ease;
-		transition: opacity 0.5s ease;
-		position: relative;
-		z-index: -1;
-		overflow: hidden;
-	}
-
-	#wrapper > .bg {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #ffffff;
+		#wrapper {
+		background-color: #212931;
 		background-image: url("../../images/background/background-large.png");
-		background-position: center ;
+		background-size: cover;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-size: cover;
-		 
-	  }
-	  
-	  @media screen and (min-width: 1281px) {
-		#wrapper > .bg {
-		  background-attachment: scroll; /* Change to scroll for large screens */
-		  background-size: 100% auto; /* Adjust as needed */
-		  background-position: center top; /* Adjust as needed */
 		}
-	  }
+	
+	  
+	 
 
 @media screen and (max-width: 1280px) {
-	#wrapper > .bg {
+	#wrapper {
 		background-image: url("../../images/background/background-medium.png");
-		background-attachment: fixed;
+		
 	}
 }
 
 @media screen and (max-width: 768px) {
-	#wrapper > .bg {
+	#wrapper  {
 		background-image: url("../../images/background/background-sp-large.png");
 		background-attachment: fixed;
 	}
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
-	#wrapper > .bg {
+	#wrapper {
 		background-image: url("../../images/earth-large-smartphone-landscape.webp");
 	}
 }
 
 @media screen and (max-width: 480px) {
-	#wrapper > .bg {
+	#wrapper {
 		background-image: url("../../images/background/background-sp-small.png");
 		background-attachment: fixed;
 	}
 }
 @media screen and (max-width: 480px) and (orientation: landscape) {
-	#wrapper > .bg {
+	#wrapper  {
 		transform: rotate(90deg);
 	}
 }
