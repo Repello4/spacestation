@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-.row {
+.project-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -44,8 +44,10 @@
 }
 .project-container a {
     position: relative;
+    justify-content: center;
     bottom: 0;
-    width: 100%;
+    width: 60%;
+    border-radius: 10px;
 }
 
 .grid-box .grid-line-1 {
@@ -83,19 +85,50 @@
     left: 0;
     background-color: #000;
 }
+
+
+
+@media screen and (max-width: 2000px) {
+
+    .project-container {
+        font-size: 14pt;
+    }
+
+}
+
+@media screen and (max-width: 1800px) {
+
+    .project-container {
+        font-size: 12pt;
+    }
+
+}
+
+
+
 @media screen and (max-width: 768px) {
-    .row {
+    .grid-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .project-row {
         flex-direction: column;
         height: auto;
     }
 
     .project-container {
-        flex: 0 0 100%;
+        padding: 10%;
         height: 33.333vh;
     }
 
     .grid-box .grid-line-1,
-    .grid-box .grid-line-2 {
+    .grid-box .grid-line-2,
+    .grid-box .grid-line-3,
+    .grid-box .grid-line-4 {
         display: none;
     }
 }

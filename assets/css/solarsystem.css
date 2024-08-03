@@ -74,14 +74,12 @@
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
     z-index: 1; /* Ensure the highlighted planet appears above others */
 }
+
 .container {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-color: white;
-    background-image: url("../../images/space.png");
-    background-size: cover;
-    background-position: center;
+
     color: #ffffff!important;
   }
   
@@ -90,7 +88,7 @@
   }
 
   .solar-system {
-    width: 65%;
+    width: 60%;
     height: 100%;
 /* 
     background-image: url("../../images/space4.png");
@@ -104,14 +102,34 @@
 }
 
 .info-display {
-  width: 35%;
+  width: 40%;
   height: 100%;
   
   align-items: center;
   justify-content: center;
   padding: 10px;
-  
+  position: relative;
 }
+
+
+.info-display::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    background-clip: padding-box; border-radius: 40px;
+}
+.info-display p, .info-display h1, .info-display h2, .info-display h3, .info-display h4, .info-display h5, .info-display h6, .info-display b {
+    position: relative;
+    z-index: 1;
+}
+
+
+
 
 .education img{
     width: 200px;
@@ -138,14 +156,26 @@
 }
 
 .ind-skill .skill-img-container{
-    width: 75px;
-    height: 75px;
+    width: 10vh;
+    height: 10vh;
     display: flex;
     flex-direction: column;
-    margin: 30px; /* Adjusted for spacing between each element */
+    margin: 2vh;
+    margin-left: 3vmin;
+    margin-right: 3vmin; /* Adjusted for spacing between each element */
 }
 
-
+.ind-skill .skill-img-container img{
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    margin:auto;
+     /* Adjusted for spacing between each element */
+}
+.ind-skill .skill-img-container p{
+    justify-content: center;
+     /* Adjusted for spacing between each element */
+}
 
     /* Adjusted for spacing between image and text */
 .skill-img-container:hover{
@@ -163,7 +193,7 @@
         flex-direction: column;
         width: 100%;
         height: 100vh;
-        background-color: white;
+
       }
     .solar-system {
         width: 100%;
@@ -265,17 +295,43 @@
         margin-top: -15px;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .solar-system {
+        width: 100%;
+        height: 30%;
+    }
+    .info-display {
+        width: 100%;
+        height: 70%;
+        position: relative;
+    }
+    .info-display::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+    .info-display p, .info-display h1, .info-display h2, .info-display h3, .info-display h4, .info-display h5, .info-display h6, .info-display b {
+        position: relative;
+        z-index: 1;
+    }
+}
 @media screen and (max-width: 385px)  {
 
  
-    .info-display p,h1,h2,h3,h4,h5,h6,b{
-        font-size: .6rem;
-    }
+  
     .ind-skill .skill-img-container {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         margin-top: 20px;
         margin-bottom: 20px;
+        font-size: .6rem;
 
         
     }
