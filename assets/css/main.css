@@ -3228,10 +3228,6 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
-
-
-
-
 	#wrapper > .bg {
 		position: fixed;
 		top: 0;
@@ -3244,28 +3240,51 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
-		z-index: -1;
-	}
-	
-	@media screen and (max-width: 1280px) {
+		 
+	  }
+	  
+	  @media screen and (min-width: 1281px) {
 		#wrapper > .bg {
-			background-attachment: fixed;
+		  background-attachment: scroll; /* Change to scroll for large screens */
+		  background-size: 100% auto; /* Adjust as needed */
+		  background-position: center top; /* Adjust as needed */
 		}
+	  }
+
+@media screen and (max-width: 1280px) {
+	#wrapper > .bg {
+		background-image: url("../../images/background/background-medium.png");
+		background-attachment: fixed;
 	}
-	
-	@media screen and (orientation: portrait) {
-		#wrapper > .bg {
-			background-size: auto 100%; /* This will make sure the image covers the full height in portrait mode */
-		}
+}
+
+@media screen and (max-width: 768px) {
+	#wrapper > .bg {
+		background-image: url("../../images/background/background-sp-large.png");
+		background-attachment: fixed;
 	}
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	#wrapper > .bg {
+		background-image: url("../../images/earth-large-smartphone-landscape.webp");
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#wrapper > .bg {
+		background-image: url("../../images/background/background-sp-small.png");
+		background-attachment: fixed;
+	}
+}
+@media screen and (max-width: 480px) and (orientation: landscape) {
+	#wrapper > .bg {
+		transform: rotate(90deg);
+	}
+}
 		
 
 
-			#wrapper > .bg.fixed {
-				position: fixed;
-				width: 100vw;
-				height: 100vh;
-			}
+
  
 		#wrapper.fade-in:before {
 			pointer-events: none;
@@ -3292,29 +3311,7 @@ input, select, textarea {
 			opacity: 1;
 		}
 
-		html, body {
-			height: 100%;
-			overflow-x: hidden;
-		}
-		
-		body {
-			background-color: #ffffff;
-			background-image: url("../../images/earth.webp");
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-		}
-		
-		#wrapper {
-			position: relative;
-			z-index: 1;
-		}
-		
-		#wrapper > .bg {
-			display: none; /* Hide the original background */
-		}
-
+	
 /* Intro */
 
 	#intro {
@@ -3656,8 +3653,8 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
+		width: calc(100%);
+	
 		z-index: 2;
 	}
 
