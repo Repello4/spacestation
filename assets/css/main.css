@@ -3233,7 +3233,7 @@ input, select, textarea {
 
 
 	#wrapper > .bg {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -3243,11 +3243,21 @@ input, select, textarea {
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-size: cover; /* Changed from 100% 100% to cover */
+		background-size: cover;
 		z-index: -1;
 	}
-
-
+	
+	@media screen and (max-width: 1280px) {
+		#wrapper > .bg {
+			background-attachment: fixed;
+		}
+	}
+	
+	@media screen and (orientation: portrait) {
+		#wrapper > .bg {
+			background-size: auto 100%; /* This will make sure the image covers the full height in portrait mode */
+		}
+	}
 		
 
 
@@ -3282,10 +3292,27 @@ input, select, textarea {
 			opacity: 1;
 		}
 
-		@media screen and (orientation: portrait) {
-			#wrapper > .bg {
-				background-size: auto 100%; /* This will make sure the image covers the full height in portrait mode */
-			}
+		html, body {
+			height: 100%;
+			overflow-x: hidden;
+		}
+		
+		body {
+			background-color: #ffffff;
+			background-image: url("../../images/earth.webp");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		
+		#wrapper {
+			position: relative;
+			z-index: 1;
+		}
+		
+		#wrapper > .bg {
+			display: none; /* Hide the original background */
 		}
 
 /* Intro */
