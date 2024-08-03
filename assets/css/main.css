@@ -3224,7 +3224,7 @@ input, select, textarea {
 		-ms-transition: opacity 0.5s ease;
 		transition: opacity 0.5s ease;
 		position: relative;
-		z-index: 1;
+		z-index: -1;
 		overflow: hidden;
 	}
 
@@ -3235,8 +3235,8 @@ input, select, textarea {
 		width: 100%;
 		height: 100%;
 		background-color: #ffffff;
-		background-image: url("../../images/earth.webp");
-		background-position: center center;
+		background-image: url("../../images/background/background-large.png");
+		background-position: center ;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
