@@ -3631,7 +3631,7 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
-		width: calc(100%);
+		width: 99%;
 	
 		z-index: 2;
 	}
@@ -3967,7 +3967,8 @@ input, select, textarea {
 		cursor: default;
 		position: relative;
 		margin: 0 auto;
-		width: calc(100% - 4rem);
+		width: calc(100% - 30rem);
+		
 		max-width: 72rem;
 		z-index: 2;
 	}
@@ -4629,7 +4630,7 @@ input, select, textarea {
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
+		
 			width: 7rem;
 		}
 
@@ -4728,4 +4729,7 @@ input, select, textarea {
 			opacity: 0;
 			animation: dramaticEntry 1s ease-in-out 1.5s;
 			animation-fill-mode: forwards;
+		}
+		body {
+			padding-bottom: 0; /* Adjust this value as needed */
 		}
