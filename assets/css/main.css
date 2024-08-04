@@ -3242,11 +3242,11 @@ input, select, textarea {
 		background-attachment: fixed;
 	}
 }
-@media screen and (max-width: 768px) and (orientation: landscape) {
+/* @media screen and (max-width: 768px) and (orientation: landscape) {
 	#wrapper {
 		background-image: url("../../images/background/background-sp-large-landscape.png");
 	}
-}
+} */
 
 @media screen and (max-width: 480px) {
 	#wrapper {
@@ -3254,11 +3254,11 @@ input, select, textarea {
 		background-attachment: fixed;
 	}
 }
-@media screen and (max-width: 480px) and (orientation: landscape) {
+/* @media screen and (max-width: 480px) and (orientation: landscape) {
 	#wrapper  {
 		transform: rotate(90deg);
 	}
-}
+} */
 		
 
 
