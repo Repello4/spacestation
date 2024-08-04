@@ -3235,25 +3235,15 @@ input, select, textarea {
 		
 	}
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 768px) {
 	#wrapper  {
-		background-size: contain;
-		background-image: url("../../images/background/background-medium.png");
-		background-attachment: fixed;
-	}
-}
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-	#wrapper  {
-		background-size: contain;
-		background-attachment: fixed;
 		background-image: url("../../images/background/background-sp-large.png");
-		
+		background-attachment: fixed;
 	}
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	#wrapper {
-		background-size: contain;
-		background-attachment: fixed;
 		background-image: url("../../images/background/background-sp-large-landscape.png");
 	}
 }
@@ -3262,13 +3252,11 @@ input, select, textarea {
 	#wrapper {
 		background-image: url("../../images/background/background-sp-small.png");
 		background-attachment: fixed;
-		background-size: contain;
 	}
 }
 @media screen and (max-width: 480px) and (orientation: landscape) {
 	#wrapper  {
-		background-image: url("../../images/background/background-sp-small.png");
-		background-size: contain;
+		transform: rotate(90deg);
 	}
 }
 		
